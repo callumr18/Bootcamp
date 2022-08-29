@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>30</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>QuizWizard
+--
+Fields
+-- 
+--
+Constructor
++QuizWizard()
+Methods
++ start()
+- printInstructions
+- printGoodbyeMessage
+- addQuestion
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>90</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Quiz
+--
+Fields
+- Hashmap&lt;String, Question&gt;
+- OWNER: private string
+- moduleRefence: string
+Constructor
++Quiz()
+Methods
+-
++ addQuestion()
++ printQuiz()
++ printAllQuestions
++ remove()
++ setOwner()
+- getOwner
++ getModuleReference
++ getSize()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>450</y>
+      <w>260</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>Question
+--
+Fields
+-- actualQuestion: String
+-- answers: Array
+- unqiueCode: string
+--
+Constructor
++Question(int numAnswers)
+Answers new array(numAnswers)
++ set numAnswers with a  parameter
+--
+Methods
+- setUpAlphabet
++ printQuestion
++ setCorrectAnswer()
++ setAnswer()
++ setUniqueCode
++ getCorrectAnswer()
++ getQuestion()
++ getAnswerLength()
++ getUniqueCode()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>210</x>
+      <y>590</y>
+      <w>240</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Note..
+A Question may have a set number of 
+answers, labelled with  letters 
+(e.g., (a), (b), etc.). The number of 
+answers has to be specified when
+creating a question.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>60</y>
+      <w>420</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>400.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>280</y>
+      <w>70</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>340</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>InputReader
+--
+Fields
+- scanner: Scanner
+--
+Constructor
++InputReader()
+--
+Methods
++ getAnswer(string prompt) </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>650</x>
+      <y>300</y>
+      <w>260</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Note..
+A Quiz can contain an arbitrary
+number of questions (they can be
+added, replaced or removed at any time
+Quiz will have a hashmap of Questions
+with the key being the uniqueCode.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>220</y>
+      <w>40</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>230</x>
+      <y>90</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Note..
+ This class is all about the user interacting with the quiz,
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
